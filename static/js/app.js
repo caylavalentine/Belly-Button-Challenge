@@ -67,7 +67,7 @@ function init() {
   // Grab a reference to the dropdown select element
   let selector = d3.select("#selDataset");
   // Use the list of sample names to populate the select options
-  d3.json("../../samples.json").then((data)=>{
+  d3.json("https://github.com/caylavalentine/Belly-Button-Challenge/blob/main/samples.json").then((data)=>{
     console.log(data)
     for(let i = 0; i < data.names.length; i++){selector.append("option").text(data.names[i]).property("value", data.names[i])}
   })
